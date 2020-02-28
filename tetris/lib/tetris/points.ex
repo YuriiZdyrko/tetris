@@ -80,6 +80,6 @@ defmodule Tetris.Points do
     Enum.map(points, fn point -> add_color(point, color) end)
   end
   
-  def add_color({_x, _y, _c}, color), do: colorpoint
+  def add_color(point = {_x, _y, _c}), do: point
   def add_color({x, y}, color), do: {x, y, color}
 end
